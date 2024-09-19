@@ -16,12 +16,27 @@ header {
   text-align: center;
 
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #links {
   display: flex;
   list-style: none;
   gap: 30px;
+}
+
+#links:not(#order) {
+  order: 1;
+}
+
+#order {
+  order: -1;
+}
+
+#links > li {
+  margin: 0 15px;
 }
 
 #links a,
@@ -56,6 +71,7 @@ header {
 #intro-image {
   max-width: 100%;
   border-radius: 10px;
+  align-self: center;
 }
 
 #figures {
@@ -75,6 +91,10 @@ header {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+.figure-item:nth-child(odd) {
+  flex-shrink: 4;
 }
 
 footer {
